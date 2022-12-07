@@ -1,0 +1,52 @@
+.main-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-contacts {
+    display: flex;
+    margin: 0px;
+    padding: 32px 0px;
+    align-items: center;
+
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*ІКОНКИ КОНТАКТІВ ХЕДЕРА*/
+.icon-mail {
+    width: 16px;
+    height: 12px;
+    fill: var(--primary-text-color);
+    margin-right: 10px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        fill: var(--accent-color);
+    }
+}
+.icon-number {
+    width: 10px;
+    height: 16px;
+    fill: var(--primary-text-color);
+    margin-right: 10px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+     fill: var(--accent-color);
+    }
+}
+
+
+.main-contacts .item + .item {
+    /* оформлення бокс контейнер */
+    margin-left: 50px;
+}

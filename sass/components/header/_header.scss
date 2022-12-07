@@ -1,0 +1,10 @@
+.container.head {
+    display: flex;
+}
+.header {
+    border-bottom: 1px solid var(--border-color); 
+}
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
