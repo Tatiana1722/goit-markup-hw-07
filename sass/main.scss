@@ -1,6 +1,17 @@
+// CONNECT HEADER STYLES
+@import "./utils/variables";
+@import "./main-styles";
+@import "./main-template";
+@import "./header/header";
+@import "./header/header-template";
+@import "./header/main-navigation";
+@import "./header/main-contacts";
+@import "./hero/hero";
+@import "./strenght-sides/strenght-sides";
+@import "./what-we-do/what-we-do";
+@import "./our-team/template_our-team";
+@import "./our-team/our-team";
+@import "./regular-clients/regular-clients";
+@import "./footer/footer";
+@import "./modal/modal";
 
-@import url(./components/body/_hero.scss);
-@import url(./components/body/_strenght-sides.scss);
-@import url(./components/body/_what-we-do.scss);
-@import url(./components/body/_our-team.scss);
-@import url(./components/body/_regular-clients.scss);

@@ -1,0 +1,81 @@
+%main-logo {
+    color: $accent-color;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    & .span {
+        color: $next-primary-text-color;
+    }
+
+}
+
+%buttons {
+    display: block;
+    margin: auto;
+    padding: 10px 32px;
+    
+    cursor: pointer;
+
+    font-family: 'Roboto', sans-serif;
+    background-color: $accent-color;
+    color: $main-background-color;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    &:hover, &:focus {
+     background-color: $accent-color;
+     color: $main-background-color;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+%title-for-sections {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+%networks {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, &:focus {
+     background-color: $accent-color;
+    }
+}
+
+%secondary-headings {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+%icon {
+    fill: $social-networks;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .networks:hover &, .networks:focus & {
+      fill: $main-background-color;
+    }
+}

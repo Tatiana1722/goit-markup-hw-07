@@ -1,0 +1,29 @@
+.main-contacts {
+    display: flex;
+    margin-left: auto;
+    padding-left: 0px;
+
+    & .item + .item {
+        margin-left: 50px;
+    }
+}
+
+.header-contacts {
+    @extend %header-links-contacts;
+    align-items: center;
+
+    color: $primary-text-color;
+    
+}
+
+// CONTACTS ICONS
+.icon-mail {
+    @extend %header-icon;
+    width: 16px;
+    height: 12px;
+}
+.icon-number {
+    @extend %header-icon;
+    width: 10px;
+    height: 16px;
+}

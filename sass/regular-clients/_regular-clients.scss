@@ -1,0 +1,45 @@
+.section.regular-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.clients-title {
+    @extend %title-for-sections;
+}
+.clients-list {
+    display: flex;
+}
+.clients-list .item {
+    list-style: none;
+    margin-right: 30px;
+
+    &:last-child {
+     margin-right: 0px;
+    }
+}
+.roop {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    align-items: center;
+    list-style: none;
+    width: 170px;
+    height: 92px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:last-child {
+     margin-right: auto;
+    }
+    &:hover, &:focus {
+     border: 1px solid $accent-color; 
+    }
+}
+.client {
+    fill: $social-networks;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .roop:hover &, .roop:focus & {
+     fill: $accent-color;  
+    }
+}

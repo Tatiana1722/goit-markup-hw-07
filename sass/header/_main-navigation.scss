@@ -1,0 +1,24 @@
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+.main-nav {
+    display: flex;
+    margin: 0px 0px 0px 93px;
+    padding-left: 0px;
+}
+.main-nav .item {
+    position: relative;
+    margin-right: 50px;
+
+    &:last-child {
+     margin-right: 0;
+    }
+}
+.header-link {
+    @extend %header-links-contacts;
+    color: $title-text-color;
+}
+.current {
+    color: $accent-color;
+}

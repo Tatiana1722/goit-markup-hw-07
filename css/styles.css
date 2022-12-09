@@ -39,8 +39,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-
-    align-items: center;
 }
 
 
@@ -126,14 +124,16 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .main-contacts {
     display: flex;
     margin-left: auto;
+    padding-left: 0px;
 }
 
 .header-contacts {
     /* оформлення бокс контейнер */
     display: flex;
-    margin: 0px;
-    padding: 32px 0px;
-
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
     align-items: center;
 
     /* Стилізація */
@@ -190,9 +190,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
     url(../images/hero.svg);
     width: 1600px;
 }
-/* .hero .container {
+.hero .container {
     align-items: center;
-} */
+}
 
 .effective-solutions {
     margin-left: auto;
@@ -212,9 +212,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 
 /* Розмічаємо всі кнопки сайту */
-.button-main, .button-portfolio {
-cursor: pointer;
-}
+
 .button-main, .submit {
     /* оформлення бокс контейнер */
     display: block;
@@ -236,6 +234,8 @@ cursor: pointer;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
+
+    cursor: pointer;
 }
 .button-portfolio {
     /* оформлення бокс контейнер */

@@ -1,8 +1,5 @@
-.what-we-do {
-    @extend %title;
-}
 .section.strenght-sides {
-    background-color:var(--main-background-color);
+    background-color:&main-background-color;
     padding: 94px 0;
 }
 .strengths {
@@ -16,12 +13,10 @@
     height: 120px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--our-team-main-color);
+    background-color: $our-team-main-color;
     border-radius: 4px;
     margin-bottom: 30px;
-
 }
-
 .item.attention-to-details::before {
     background-image: url(../images/Attention_to_details.svg)
 }
@@ -34,32 +29,25 @@
 .item.modern-technology::before {
     background-image: url(../images/modern_technology.svg);
 }
-
-
 .strengths .item {
     margin-left: 30px;
+    &:first-child {
+        margin-left: 0px;
+    }
 }
-.strengths .item:first-child {
-    margin-left: 0px;
-}
-.strengths-sides-title {
+.main-strengths-title {
     display: none;
 }
 .strengths-title {
     margin-bottom: 10px;
-
-    color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    color: $title-text-color;
+    @extend %secondary-headings;
 }
 .strengths-text {
     margin-top: 0;
     margin-bottom: 0;
       
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;

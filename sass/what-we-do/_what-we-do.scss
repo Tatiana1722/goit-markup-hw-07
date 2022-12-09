@@ -1,0 +1,41 @@
+.section.what-we-do {
+    margin-bottom: 0px;
+    padding-bottom: 94px;
+    background-color: $main-background-color;
+}
+.what-we-do {
+    @extend %title-for-sections;
+}
+.our-works {
+    display: flex;
+    & .item {
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0px;        
+        }
+    }
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.thumb-our-works {
+    position: relative;
+    content: "";
+    display: block;
+}
+.captions {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    color: $main-background-color;
+    @extend %secondary-headings;
+}
