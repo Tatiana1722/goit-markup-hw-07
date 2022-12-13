@@ -1,13 +1,15 @@
-.main-navigation {
+.header__nav {
     display: flex;
     align-items: center;
 }
-.main-nav {
+.nav {
     display: flex;
     margin: 0px 0px 0px 93px;
     padding-left: 0px;
+
+    list-style: none;
 }
-.main-nav .item {
+.nav .item {
     position: relative;
     margin-right: 50px;
 
@@ -15,10 +17,8 @@
      margin-right: 0;
     }
 }
-.header-link {
+.nav__link {
     @extend %header-links-contacts;
     color: $title-text-color;
 }
-.current {
-    color: $accent-color;
-}
+

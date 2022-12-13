@@ -1,17 +1,17 @@
-// CONNECT HEADER STYLES
 @import "./utils/variables";
-@import "./main-styles";
-@import "./main-template";
-@import "./header/header";
-@import "./header/header-template";
-@import "./header/main-navigation";
-@import "./header/main-contacts";
-@import "./hero/hero";
-@import "./strenght-sides/strenght-sides";
-@import "./what-we-do/what-we-do";
-@import "./our-team/template_our-team";
-@import "./our-team/our-team";
-@import "./regular-clients/regular-clients";
-@import "./footer/footer";
-@import "./modal/modal";
+@import "./base/main-styles";
+@import "./utils/main-template";
+@import "./components/header";
+@import "./components/header-template";
+@import "./components/main-navigation";
+@import "./components/main-contacts";
+@import "./components/hero";
+@import "./components/strenght-sides";
+@import "./components/what-we-do";
+@import "./components/template_our-team";
+@import "./components/our-team";
+@import "./components/regular-clients";
+@import "./components/footer";
+@import "./components/modal-templates";
+@import "./components/modal";
 

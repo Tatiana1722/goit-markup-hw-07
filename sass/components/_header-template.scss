@@ -27,8 +27,7 @@
     
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    
-    .header-contacts:hover &, .header-contacts:focus & {
+    .main__contacts__link:hover &, .main__contacts__link:focus & {
         fill: $accent-color;
     }
 

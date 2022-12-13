@@ -7,19 +7,7 @@ footer {
     display: flex;
     align-items: baseline;
 }
-.footer-nav {
-    display: block;
-    padding: 0px;
-    margin: 0px;
-}
-.footer-nav .item {
-    display: block;
-    margin-bottom: 9px;
-    &:last-child {
-     margin-bottom: 0px;
-    }
-}
-.footer-logo {
+.main__logo--footer {
     @extend %main-logo;
     display: block;
     margin: 0px 0px 20px 0px;
@@ -27,8 +15,20 @@ footer {
         color:$main-background-color;
     }
 }
+.footer__nav {
+    display: block;
+    padding: 0px;
+    margin: 0px;
 
-.footer-address {
+    & .item {
+     display: block;
+     margin-bottom: 9px;
+     &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+}
+.footer__address {
     color: $main-background-color;
     font-style: normal;
     font-weight: 400;
@@ -43,7 +43,7 @@ footer {
         color: $accent-color;
     }
 }
-.footer-contacts {
+.footer__contacts {
     color: $footer-contacts-color;
     font-style: normal;
     font-weight: 400;
@@ -57,41 +57,45 @@ footer {
         color: $accent-color;
     }
 }
-
+// JOIN
 .join {
-    margin-left: 70px;
+    margin-left: auto;
     align-items: flex-start;
 }
-.to_us, .subscribe {
+.join__title, .mailing-list__title {
     @extend %secondary-headings;
     margin-bottom: 20px;
     color: $main-background-color;
     font-style: normal; 
 }
-.join .social-networks {
-margin: 0px;
+.footer__social-networks {
+    margin: 0px;
+    @extend %networks-list;
 }
-.networks.footer .icon {
-    fill: $main-background-color;
-}
-.networks.footer {
+.footer__social-networks__link {
+    @extend %networks;
     background-color: $icons-background;
     &:hover, &:focus {
      background-color: $accent-color;
     }
 }
-.mailing-list {
-    margin-left: 93px;
-    margin-right: 0px;
+.footer__social-networks__link .icon {
+    fill: $main-background-color;
 }
-
-.mailinag-list-input {
+// MAILING LIST
+.mailing-list {
+    margin-left: auto;
+}
+.mailinag-list__thumb {
     display: flex;
 }
-.mailinag-list-input input {
+.mailinag-list__input {
+    padding: 15px 16px;
+
     width: 358px;
     height: 50px;
-
+    
+    outline: none;
     border-style: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -99,35 +103,25 @@ margin: 0px;
     background-color: inherit;
 
     color: $main-background-color;
+    
+    &::placeholder {
+        font-style: inherit;
+    }
 }
-.mailinag-list-input::placeholder {
-    font-style: inherit;
-}
-.mail {
-    margin-top: 15px;
-    margin-left: 16px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-
-    color: rgba(255, 255, 255, 0.6);
-}
-.mail_input {
-    padding: 15px 16px;
-    outline: none;
-}
-.icon_send {
-    margin-left: 10px;
-}
-.submit {
+.mailing-list__button {
     @extend %buttons;
     margin-left: 12px;
-    cursor: pointer;
-    &.send {
-     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
-      &:focus, &:hover {
+    cursor: pointer; 
+
+    align-items: center;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  
+ 
+    &:focus, &:hover {
         background-color: #188CE8;
-      }
     }
+}
+.mailing-list__button__icon {
+    margin-left: 10px;
+    vertical-align: middle;
 }

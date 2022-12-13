@@ -6,10 +6,6 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
-    & .span {
-        color: $next-primary-text-color;
-    }
-
 }
 
 %buttons {
@@ -47,7 +43,11 @@
     text-align: center;
     letter-spacing: 0.03em;
 }
-
+%networks-list {
+    display: flex;
+    list-style: none;
+    margin: 0px 32px 30px 32px;
+}
 %networks {
     display: flex;
     height: 44px;

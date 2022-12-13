@@ -1,14 +1,17 @@
-.container.head {
-    display: flex;
-}
 .header {
-    border-bottom: 1px solid var(--border-color); 
+    border-bottom: 1px solid $border-color; 
 }
-.main-logo {
+.header .container {
+    display: flex
+}
+.header__main-logo {
     @extend %main-logo;
+    & .span {
+        color: $next-primary-text-color;
+    }
 }
 
-.current {
+.nav__link.current {
     color: $accent-color;
 }
 

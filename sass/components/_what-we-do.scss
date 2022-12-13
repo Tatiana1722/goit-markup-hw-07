@@ -1,14 +1,14 @@
-.section.what-we-do {
+.what-we-do {
     margin-bottom: 0px;
     padding-bottom: 94px;
     background-color: $main-background-color;
 }
-.what-we-do {
+.what-we-do__title {
     @extend %title-for-sections;
 }
-.our-works {
+.what-we-do__examples {
     display: flex;
-    & .item {
+    & .thumb {
         margin-right: 30px;
         &:last-child {
             margin-right: 0px;        
@@ -20,12 +20,13 @@ img {
     max-width: 100%;
     height: auto;
 }
-.thumb-our-works {
+.what-we-do__examples .thumb {
     position: relative;
     content: "";
     display: block;
 }
-.captions {
+.what-we-do__captions {
+    @extend %secondary-headings;
     position: absolute;
     display: flex;
     align-items: center;
@@ -34,8 +35,7 @@ img {
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: rgba(47, 48, 58, 0.8);
 
+    background-color: rgba(47, 48, 58, 0.8);
     color: $main-background-color;
-    @extend %secondary-headings;
 }

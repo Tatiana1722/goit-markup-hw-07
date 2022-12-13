@@ -1,15 +1,15 @@
-.section.our-team {
+.our-team {
     background-color: $our-team-main-color;
     padding: 94px 0px;
 }
-.main-title {
+.our-team__title {
     display: block;
     @extend %title-for-sections;
 }
-.participants {
+.members {
     display: flex;
 }
-.members-team {
+.members__cards {
     background-color: $main-background-color;
     margin-right: 30px;
     border-radius: 0px 0px 4px 4px;
@@ -19,41 +19,37 @@
      margin-right: 0px;
     }
 }
-.members-team .item {
+.members__cards .item {
     margin-top: 30px;
     margin-bottom: 16px;
 }
-.team-title {
+.members__name {
     margin-bottom: 10px;
 
     color: $title-text-color;
     font-weight: 500;
     @extend %text;
 }
-.team-text {
+.members__position {
     margin-top: 0;
     margin-bottom: 0;
     
     color: $primary-text-color;
     @extend %text;
 }
-
-/* Додаю іконки до соцмереж */
-.social-networks {
-    display: flex;
-    list-style: none;
-    margin: 0px 32px 30px 32px;
-}
-.instagram, .twitter, .facebook, .likedin {
-margin-right: 10px;
-  &:last-child{
-     margin-right: 0px;
-    }
+// ADDED ICONS TO SOCIAL NETWORKS
+.our-team__social-networks {
+    @extend %networks-list;
 }
 .networks {
     @extend %networks;
 }
 .icon {
-  @extend %icon;
+    @extend %icon;
 }
-
+.instagram, .twitter, .facebook, .likedin {
+    margin-right: 10px;
+      &:last-child{
+         margin-right: 0px;
+        }
+    }

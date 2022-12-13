@@ -27,7 +27,7 @@
 
     background-color: $main-background-color;
 }
-.modal-button {
+.modal__button--close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -41,51 +41,37 @@
 
     background-color: $main-background-color;
     border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover, &:focus {
+        fill: $accent-color;
+    }
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal_caption {
+.modal__caption {
     font-weight: 700;
-        font-size: 20px;
-        line-height: 23px;
-        text-align: center;
-        letter-spacing: 0.03em;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
     
-        color: #212121;
+    color: #212121;
 }
-.modal-data {
+.modal__data {
+ margin-top: 12px;
+}
+.item {
     margin-top: 10px;
 }
-.modal-data.tyu {
-    margin-top: 12px;
+.modal__label {
+ @extend %modal-label;
 }
-.sy {
+.modal__thumb {
     position: relative;
     content: "";
     display: block;
 }
-.icon_man {
-    position: absolute; 
-
-    top: 50%;
-    left: 15px;
-
-    transform: translateY(-50%);
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-label {
-    display: block;
-    margin-bottom: 4px;
-
-    font-style: inherit;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    
-    letter-spacing: 0.01em;
-    color: #757575;
-}
-
-.modal-input {
+.modal__input {
     display: flex;
     width: 100%;
     height: 40px;
@@ -97,39 +83,57 @@
     border-radius: 4px;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+        border-color: $accent-color;
+    }
 }
-.modal-input.coments {
+.modal__icon {
+    position: absolute; 
+
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal__input:focus+& {
+        fill: $accent-color;
+    }
+}
+.modal__coments__label {
+    @extend %modal-label;
+}
+.modal__coments__input {
     padding: 12px 16px;
 
     width: 448px;
     height: 120px;
     resize: none;
-}
-.modal-input.coments::placeholder {
-    font-size: 12px;
-    color: rgba(117, 117, 117, 0.5);
-    font-style: inherit;
-}
-.modal-input:focus {
-    border-color: $accent-color;
-}
 
-.modal-input:focus+.icon_man {
-    fill: $accent-color;
-}
+    outline: none;
 
-.modal-data.check {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder {
+        font-size: 12px;
+        color: rgba(117, 117, 117, 0.5);
+        font-style: inherit;
+    }
+}
+.checkbox {
     margin-top: 20px;
     padding-left: 12px;
     padding-right: 12px;
 }
-.field {
+.checkbox .item {
     display: flex;
     font-style: inherit;
     font-size: 14px;
     color: $primary-text-color;
 }
-.checkbox {
+.checkbox__input {
     position: absolute;
 
     width: 1px;
@@ -142,26 +146,29 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.icon_check {
+.checkbox__icon {
     display: inline-block;
     width: 16px;
     height: 15px;
     margin-right: 8.38px;
 
- 
    background-image: url(../images/frame_icon_check.svg);
 
     transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    .checkbox__input:checked + & {
+        background-image: url(../images/icon_check.svg);
+        background-size: contain;
+    }
 }
-
-
-.checkbox:checked + .icon_check {
-    background-image: url(../images/icon_check.svg);
-    background-size: contain;
-    
+.checkbox__caption {
+    letter-spacing: 0.03em;
 }
-.submit.send {
+.contract {
+    color: $accent-color;
+}
+.modal__button--submit {
+    @extend %buttons; 
     position: absolute;
     bottom: 40px;
    left: 50%;
@@ -170,13 +177,4 @@
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contract {
-    color: $accent-color;
-}
-.check_caption {
 
- letter-spacing: 0.03em;
-}
-.submit.send {
-    @extend %buttons;
-}

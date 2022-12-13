@@ -1,4 +1,4 @@
-.main-contacts {
+.contacts {
     display: flex;
     margin-left: auto;
     padding-left: 0px;
@@ -8,22 +8,29 @@
     }
 }
 
-.header-contacts {
+.contacts__link {
     @extend %header-links-contacts;
     align-items: center;
 
     color: $primary-text-color;
-    
 }
 
 // CONTACTS ICONS
-.icon-mail {
+.contacts__icon-mail {
     @extend %header-icon;
     width: 16px;
     height: 12px;
+
+    .contacts__link:hover &, .contacts__link:focus & {
+        fill: $accent-color;
+    }
 }
-.icon-number {
+.contacts__icon-number {
     @extend %header-icon;
     width: 10px;
     height: 16px;
+
+    .contacts__link:hover &, .contacts__link:focus & {
+        fill: $accent-color;
+    }
 }
